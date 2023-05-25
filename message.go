@@ -1,5 +1,13 @@
 package gpt
 
+import "time"
+
+type Message struct {
+	CreatedAt time.Time
+	Role      int    `json:"role"`
+	Content   string `json:"content"`
+}
+
 type Messages []Message
 
 func (m Messages) toJsonMessages() []conversationMessageJson {

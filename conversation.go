@@ -176,9 +176,3 @@ func StringToMessageType(messageType string) int {
 		return MessageTypeUser
 	}
 }
-
-type Message struct {
-	CreatedAt time.Time
-	Role      int    `json:"role"`
-	Content   string `json:"content"`
-}
